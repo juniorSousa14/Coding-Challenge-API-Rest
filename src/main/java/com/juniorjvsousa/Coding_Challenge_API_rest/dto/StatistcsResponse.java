@@ -14,6 +14,7 @@ public class StatistcsResponse {
         this.sum = stats.getSum();
         this.avg = stats.getAverage();
         this.min = stats.getMin();
+        this.max = stats.getMax();
 
 
     }
