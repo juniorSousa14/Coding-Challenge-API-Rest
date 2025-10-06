@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class CodingChallengeApiRestApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(CodingChallengeApiRestApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(CodingChallengeApiRestApplication.class, args);
+    }
 
 }

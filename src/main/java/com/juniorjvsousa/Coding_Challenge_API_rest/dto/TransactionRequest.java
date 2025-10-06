@@ -1,4 +1,4 @@
-package dto;
+package com.juniorjvsousa.Coding_Challenge_API_rest.dto;
 
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;

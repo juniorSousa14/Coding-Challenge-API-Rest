@@ -1,4 +1,4 @@
-package dto;
+package com.juniorjvsousa.Coding_Challenge_API_rest.dto;
 
 import java.util.DoubleSummaryStatistics;
 

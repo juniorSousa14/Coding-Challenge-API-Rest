@@ -1,6 +1,7 @@
-package service;
+package com.juniorjvsousa.Coding_Challenge_API_rest.service;
 
-import model.Transaction;
+
+import com.juniorjvsousa.Coding_Challenge_API_rest.model.Transaction;
 import org.springframework.stereotype.Service;
 
 import java.time.OffsetDateTime;
@@ -21,11 +22,11 @@ public class TrasactionService {
         transactions.clear();
     }
 
-    public DoubleSummaryStatistics getStatidtics(){
+    public DoubleSummaryStatistics getStatidtics() {
         OffsetDateTime now = OffsetDateTime.now();
         return transactions.stream()
                 .filter(t -> t.getDataHora().isAfter(now.minusSeconds(60)))
-                .mapToDouble(Transaction:: getValor)
+                .mapToDouble(Transaction::getValor)
                 .summaryStatistics();
     }
 }

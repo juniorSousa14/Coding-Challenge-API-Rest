@@ -1,15 +1,13 @@
-package controller;
+package com.juniorjvsousa.Coding_Challenge_API_rest.controller;
 
-import dto.TransactionRequest;
+
+import com.juniorjvsousa.Coding_Challenge_API_rest.dto.TransactionRequest;
+import com.juniorjvsousa.Coding_Challenge_API_rest.model.Transaction;
+import com.juniorjvsousa.Coding_Challenge_API_rest.service.TrasactionService;
 import jakarta.validation.Valid;
-import model.Transaction;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import service.TrasactionService;
+import org.springframework.web.bind.annotation.*;
 
 import java.time.OffsetDateTime;
 
@@ -32,6 +30,12 @@ public class TransactionController {
         transactionService.addTransaction(new Transaction(request.getValor(), request.getDataHora()));
         return ResponseEntity.status(HttpStatus.CREATED).build();
 
+    }
+
+    @DeleteMapping
+    public ResponseEntity<Void> clearTransactions() {
+        transactionService.clearTransactions();
+        return ResponseEntity.ok().build();
     }
 
 

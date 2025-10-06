@@ -1,4 +1,4 @@
-package model;
+package com.juniorjvsousa.Coding_Challenge_API_rest.model;
 
 import java.time.OffsetDateTime;
 
